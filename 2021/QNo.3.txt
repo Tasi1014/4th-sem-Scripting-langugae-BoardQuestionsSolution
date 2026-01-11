@@ -1,0 +1,78 @@
+What is JavaScript? Explain different types of JavaScript with proper example.
+What is JavaScript?
+
+JavaScript is a scripting language used to make web pages dynamic and interactive.
+It runs in the browser and is used to handle events, validate forms, change HTML content, control styles, and communicate with servers without reloading the page.
+
+In simple words:
+HTML = structure
+CSS = design
+JavaScript = behavior
+
+Types of JavaScript (Ways to use JavaScript)
+1) Inline JavaScript
+
+JavaScript is written directly inside an HTML tag.
+
+Example:
+
+<button onclick="alert('Hello World')">Click Me</button>
+
+
+Use: Small actions like button clicks.
+Problem: Makes HTML messy and hard to manage.
+
+2) Internal JavaScript
+
+JavaScript is written inside <script> tag in the same HTML file.
+
+Example:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function showMessage() {
+      alert("Welcome to JavaScript");
+    }
+  </script>
+</head>
+<body>
+  <button onclick="showMessage()">Click</button>
+</body>
+</html>
+
+
+Use: Medium-size scripts in a single page.
+
+3) External JavaScript
+
+JavaScript is written in a separate .js file and linked to HTML.
+
+script.js
+
+function greet() {
+  alert("Hello from external file");
+}
+
+
+HTML file
+
+<script src="script.js"></script>
+<button onclick="greet()">Click</button>
+
+
+Use: Best for large projects, clean code, reusable scripts.
+
+Conclusion
+
+JavaScript is used to make web pages interactive.
+It can be used in three main ways:
+
+Inline JavaScript
+
+Internal JavaScript
+
+External JavaScript
+
+External JavaScript is the best method for real projects because it keeps code organized and reusable.
