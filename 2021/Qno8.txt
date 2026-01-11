@@ -1,0 +1,52 @@
+Write short note on (any two):
+a) Types of array in PHP
+b) Arrow Function in JavaScript
+c) jQuery UI
+
+1️⃣ Types of Array in PHP
+An array in PHP is a data structure that can store multiple values under a 
+single variable name. PHP supports three main types of arrays:
+Indexed Array:
+Stores elements with numeric indexes starting from 0.
+Example:
+$fruits = array("Apple", "Banana", "Mango");
+echo $fruits[1]; // Output: Banana
+
+Associative Array:
+Stores elements with custom keys instead of numeric indexes.
+Example:
+$student = array("Name" => "Tashi", "Age" => 20, "Class" => "BCA");
+echo $student["Name"]; // Output: Tashi
+
+Multidimensional Array:
+An array containing one or more arrays inside it.
+Example:
+$students = array(
+    array("Tashi", 20),
+    array("Sherpa", 21)
+);
+echo $students[1][0]; // Output: Sherpa
+
+2️⃣ Arrow Function in JavaScript
+
+Arrow functions are a shorter syntax for writing functions in JavaScript. 
+Introduced in ES6, they are more concise and do not bind their own this.
+
+Syntax:
+(param1, param2) => {
+  // function body
+  return param1 + param2;
+}
+Examples:
+Simple Arrow Function
+let add = (a, b) => a + b;
+console.log(add(5, 3)); // Output: 8
+
+Arrow Function with Single Parameter
+let square = x => x * x;
+console.log(square(4)); // Output: 16
+
+Advantages:
+-Shorter and cleaner than regular functions
+-Automatically returns value if function has a single expression
+-Useful in callbacks, array methods like map(), filter(), forEach()
