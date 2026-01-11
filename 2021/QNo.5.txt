@@ -1,0 +1,72 @@
+What is jQuery? Explain XMLHttpRequest object with it's properties and methods with relevant example.
+What is jQuery?
+
+jQuery is a fast, small, and feature-rich JavaScript library. It simplifies:
+
+-HTML document traversal and manipulation
+-Event handling
+-Animations
+-Ajax interactions
+
+Why use jQuery?
+-Less code than plain JavaScript
+-Cross-browser compatibility
+-Easy DOM manipulation
+
+XMLHttpRequest Object
+The XMLHttpRequest (XHR) object allows JavaScript to communicate with the server without reloading the page.
+It is the foundation of AJAX.
+
+Properties of XMLHttpRequest
+Property	     Description
+readyState	     Holds the state of the request (0 to 4)
+status	         HTTP status code returned by server (200 = OK, 404 = Not Found)
+responseText     Server response as text
+responseXML	     Server response as XML (if XML sent)
+
+readyState values:
+Value	Meaning
+0	    UNSENT: Request not initialized
+1	    OPENED: Server connection established
+2	    HEADERS_RECEIVED: Request received
+3	    LOADING: Response is loading
+4	    DONE: Response is complete
+
+Methods of XMLHttpRequest
+Method	                        Description
+open(method, url, async)	    Initializes a request (GET or POST)
+send(data)	                    Sends the request to server
+setRequestHeader(header, value)	Sets HTTP request headers
+abort()	                        Cancels the request
+
+Program: 
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="loadData()">Get Data</button>
+<div id="result"></div>
+
+<script>
+function loadData() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "data.php", true); // true = asynchronous
+
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4 && xhr.status === 200){
+            document.getElementById("result").innerHTML = xhr.responseText;
+        }
+    };
+
+    xhr.send();
+}
+</script>
+
+</body>
+</html>
+
+
+data.php
+<?php
+echo "Hello"
+?>
