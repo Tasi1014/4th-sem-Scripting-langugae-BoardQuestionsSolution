@@ -1,0 +1,74 @@
+Write rules to create variable in PHP. How to create, store, access and destroy session in PHP?
+1️⃣ Rules to Create Variables in PHP
+
+Variables in PHP are used to store data like numbers, text, or arrays. Here are the rules to create a variable in PHP:
+
+-Start with a Dollar Sign $:
+Every variable name must begin with $.
+$name = "Tashi";
+
+-Followed by a Letter or Underscore:
+After $, the first character must be a letter (a-z, A-Z) or an underscore _. Numbers cannot be the first character.
+$age = 20;     // Correct
+$_count = 5;   // Correct
+//$1number = 10; // Wrong
+
+-Case Sensitive:
+$Name and $name are treated as different variables.
+
+-Can Contain Letters, Numbers, and Underscores:
+Variables can contain letters, numbers, and underscores after the first character.
+$user_name1 = "TashiSherpa";
+
+-No Reserved Keywords:
+You cannot use PHP reserved words as variable names, like echo, class, function.
+
+2️⃣ How to Create, Store, Access, and Destroy a Session in PHP
+Sessions are used to store user information across multiple pages on a website. They are stored on the server.
+
+Step 1: Start a Session
+
+Before using session variables, you must start the session at the beginning of the page:
+
+<?php
+session_start(); // Start session
+?>
+
+Step 2: Create/Store Session Variables
+
+You can store information in the session using the $_SESSION superglobal array:
+
+<?php
+session_start();
+
+$_SESSION['username'] = "Tashi";
+$_SESSION['email'] = "tashi@example.com";
+?>
+
+Step 3: Access Session Variables
+
+To retrieve the stored session values:
+
+<?php
+session_start();
+
+echo "Username: " . $_SESSION['username'];
+echo "<br>Email: " . $_SESSION['email'];
+?>
+
+Step 4: Destroy Session Variables
+
+You can destroy specific session variables:
+
+<?php
+session_start();
+unset($_SESSION['email']); // Deletes only 'email'
+?>
+
+
+Or destroy the entire session:
+
+<?php
+session_start();
+session_destroy(); // Ends session and removes all variables
+?>
