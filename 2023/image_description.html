@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Description Change</title>
+    <style>
+        #imageDiv {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="imageDiv">
+    <img src="https://www.fcbarcelona.com/fcbarcelona/photo/2022/08/02/ae5252d1-b79b-4950-9e34-6e67fac09bb0/LeoMessi20092010_pic_fcb-arsenal62.jpg" 
+         alt="Placeholder Image"
+         id="image">
+    <p id="desc">Original image description</p>
+</div>
+
+<script>
+    // Get image and description elements
+const image = document.getElementById("image");
+const desc = document.getElementById("desc");
+
+// Change description when mouse hovers over the image
+image.addEventListener("mouseover", function() {
+    desc.innerText = "This is the new description!";
+});
+
+// Reset description when mouse leaves the image
+image.addEventListener("mouseout", function() {
+    desc.innerText = "Original image description";
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+</head>
+<body>
+
+<h2>Select Background Color</h2>
+
+<form id="colorForm">
+    <input type="radio" name="color" id="green" value="green">
+    <label for="green">Green</label>
+
+    <input type="radio" name="color" id="red" value="red">
+    <label for="red">Red</label>
+
+    <input type="radio" name="color" id="blue" value="blue">
+    <label for="blue">Blue</label>
+
+    <input type="radio" name="color" id="black" value="black">
+    <label for="black">Black</label>
+</form>
+
+<script>
+    // Get all radio buttons with name "color"
+    const radios = document.getElementsByName("color");
+
+    // Loop through each radio button and attach a click event
+    for (let i = 0; i < radios.length; i++) {
+        radios[i].addEventListener("click", function() {
+            // Change the body background color to the selected value
+            document.body.style.backgroundColor = this.value;
+        });
+    }
+</script>
+
+</body>
+</html>
