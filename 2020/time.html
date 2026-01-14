@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Live Clock</title>
+</head>
+<body>
+<h2>Current Time:</h2>
+<div id="clock" style="font-size:24px; font-weight:bold;"></div>
+
+<script>
+function updateClock() {
+    const now = new Date();
+    let hours = String(now.getHours()).padStart(2, '0');
+    let minutes = String(now.getMinutes()).padStart(2, '0');
+    let seconds = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+// Update immediately and then every second
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+</body>
+</html>
